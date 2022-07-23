@@ -86,18 +86,18 @@ def routine():
         os.makedirs(videoDirectory)
     
     # Step 1: Scrape Videos
-    print("Scraping Videos...")
+    print("Scraping Videos....")
     scrapeVideos(username = IG_USERNAME,
                  password = IG_PASSWORD,
                  output_folder = videoDirectory,
                   days=1)
-    print("Scraped Videos!")
+    print("Successfully Scraped Videos!")
     
     description = "Enjoy the memes! :) \n\n" \
     "like and subscribe to @Chewy for more \n\n" \
 
     # Step 2: Make Compilation
-    print("Making Compilation...")
+    print("Making Compilation....")
     makeCompilation(path = videoDirectory,
                     introName = INTRO_VID,
                     outroName = OUTRO_VID,
@@ -105,7 +105,7 @@ def routine():
                     maxClipLength = MAX_CLIP_LENGTH,
                     minClipLength = MIN_CLIP_LENGTH,
                     outputFile = outputFile)
-    print("Made Compilation!")
+    print("Made Compilation successfully!")
     
     description += "\n\nCopyright Disclaimer, Under Section 107 of the Copyright Act 1976, allowance is made for 'fair use' for purposes such as criticism, comment, news reporting, teaching, scholarship, and research. Fair use is a use permitted by copyright statute that might otherwise be infringing. Non-profit, educational or personal use tips the balance in favor of fair use.\n\n"
     description += "#memes #dankmemes #compilation #funny #funnyvideos \n\n"
@@ -128,7 +128,7 @@ def routine():
         os.remove(outputFile)
     except OSError as e:  ## if failed, report it back to the user ##
         print ("Error: %s - %s." % (e.filename, e.strerror))
-    print("Removed temp files!")
+    print("sucessfully removed temp files!")
 
 def attemptRoutine():
     while(1):
